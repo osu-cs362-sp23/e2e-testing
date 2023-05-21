@@ -1,0 +1,14 @@
+{
+  "name": "e2e-testing",
+  "version": "1.0.0",
+  "description": "End-to-End Testing with Cypress",
+  "scripts": {
+    "start": "serve todos"
+  },
+  "author": "Hess <hessro@oregonstate.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "devDependencies": {}
+}
