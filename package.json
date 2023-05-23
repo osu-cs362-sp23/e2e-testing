@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "End-to-End Testing with Cypress",
   "scripts": {
-    "start": "serve todos"
+    "start": "serve todos",
+    "cy:open": "cypress open"
   },
   "author": "Hess <hessro@oregonstate.edu>",
   "license": "MIT",
   "dependencies": {
     "serve": "^14.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "cypress": "^12.12.0"
+  }
 }
