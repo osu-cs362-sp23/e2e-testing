@@ -24,3 +24,29 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require("@testing-library/cypress/add-commands")
+
+Cypress.Commands.add("addTodo", function (text) {
+    cy.findByPlaceholderText("Enter a To-Do").type(text)
+    cy.findByRole("button", { name: "Add To-Do" }).click()
+})
+
+Cypress.Commands.add("toggleTodoCompleted", function (text) {
+    cy.findByText(text)
+        .parents("[data-testid*='todo']")
+        .findByRole("checkbox")
+        .click()
+})
+
+Cypress.Commands.add("archiveCompletedTodo", function (text) {
+    cy.findByText(text)
+        .parents("[data-testid*='todo']")
+        .findByRole("button", { name: "Archive to-do" })
+        .click()
+})
+
+Cypress.Commands.add("deleteArchivedTodo", function (text) {
+    cy.findByText(text)
+        .parents("[data-testid*='todo']")
+        .findByRole("button", { name: "Delete to-do" })
+        .click()
+})
